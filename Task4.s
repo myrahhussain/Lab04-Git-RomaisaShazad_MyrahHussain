@@ -17,6 +17,7 @@ power:
 
     bne x11, x0, recursion
     addi x10, x0, 1      # Return 1 
+    lw   x1, 4(sp) 
     addi sp, sp, 8       # Pop stack 
     jalr x0, 0(x1)       # Return 
 
@@ -33,3 +34,4 @@ recursion:
 
 end:
     j end
+
